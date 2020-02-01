@@ -11,6 +11,10 @@
 	--cl-neu2: #8a716a;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .absolute {
 	position: absolute;
 	top: 0;
@@ -80,3 +84,5 @@
 		font-size: 1.42rem;
 	}
 }
+
+/* on the dev branch */
