@@ -6,31 +6,24 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import uglify from 'rollup-plugin-uglify-es';
 import postcss from 'rollup-plugin-postcss';
-import livereload from 'rollup-plugin-livereload'
-
-// PostCSS plugins.
-import simplevars from 'postcss-simple-vars';
-import nested from 'postcss-nested';
-import postcssPresetEnv  from 'postcss-preset-env';
-import cssnano from "cssnano";
+import livereload from 'rollup-plugin-livereload';
+import copy from 'rollup-plugin-copy';
+import serve from 'rollup-plugin-serve';
 
 export default {
-	input: './src/scripts/main.js',
+	input: './src/scripts/app.js',
 	output: {
-		file: './build/js/main.min.js',
-		format: 'iife',
-		name: 'bundle'
+		file: './dist/js/app.min.js',
+		format: 'iife'
 	},
 	plugins: [
-		postcss({
-			extensions: [ '.css' ],
-			plugins: [
-				simplevars,
-				nested,
-				postcssPresetEnv,
-				cssnano
+		copy({
+			targets: [
+				{ src: [ 'src/static/fonts/**' ], dest: 'dist/fonts' },
+				{ src: 'src/static/image/**', dest: 'dist/image' }
 			]
 		}),
+		postcss({}),
 		resolve({
 			browser: true
 		}),
@@ -46,6 +39,6 @@ export default {
 			ENV: JSON.stringify(process.env.NODE_ENV || 'development')
 		}),
 		process.env.NODE_ENV === 'production' && uglify(),
-		livereload()
+		process.env.NODE_ENV !== 'production' && serve('dist') && livereload(),
 	]
 };
