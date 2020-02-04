@@ -1,1 +1,0 @@
-document.getElementById("enterButton").addEventListener("click",(function(){window.alert("site is under construction")}));
