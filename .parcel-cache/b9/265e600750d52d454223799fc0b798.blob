@@ -1,0 +1,5 @@
+// document.getElementById("enterButton")
+//   .addEventListener("click", (function (t) {
+//     window.alert("site is under construction")
+//   }));
+console.log("parcel is working");

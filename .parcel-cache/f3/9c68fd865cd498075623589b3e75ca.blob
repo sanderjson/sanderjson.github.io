@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link href="31b2d795d47fd61d3aea70c80625dfe8" rel="stylesheet">
+  <link rel="stylesheet" href="6aad561d77b1e5e75ca54b2e9a881ee4">
+</head>
+
+<body>
+  <section class="hero">
+    <picture>
+      <source srcset="394ad40de8e41e7a2cf65d50da8f3b10" type="image/webp">
+      <img class="hero-img" src="acc4631b8a45e42abfd8513e16806223">
+    </picture>
+    <div class="hero-overlay absolute"></div>
+    <header class="hero-content absolute">
+      <h1><span class="title">Jonathan Sanderson</span>
+        <div class="sub">under development</div>
+      </h1> <button id="enterButton" class="btn" type="button">Enter</button>
+    </header>
+  </section>
+  <script src="ef5c4ca04620f1b33a12b1e5b44550b9"></script>
+</body>
+
+</html>

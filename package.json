@@ -1,0 +1,25 @@
+{
+  "name": "sanderjson.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.html",
+  "scripts": {
+    "dev": "parcel serve ./src/index.html && parcel watch",
+    "build": "parcel build ./src/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanderjson/sanderjson.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanderjson/sanderjson.github.io/issues"
+  },
+  "homepage": "https://github.com/sanderjson/sanderjson.github.io#readme"
+}

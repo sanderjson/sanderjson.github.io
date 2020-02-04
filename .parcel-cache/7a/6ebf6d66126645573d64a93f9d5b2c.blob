@@ -1,0 +1,9 @@
+// document.getElementById("enterButton")
+//   .addEventListener("click", (function (t) {
+//     window.alert("site is under construction")
+//   }));
+(function () {
+  document.getElementById("enterButton").addEventListener("click", () => {
+    window.alert("site is under construction");
+  });
+})();
